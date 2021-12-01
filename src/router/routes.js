@@ -1,6 +1,4 @@
 import Home from "../views/Home.vue";
-
-// Import from each modulo or page
 import Taxis from './taxis/taxis';
 
 export default [
