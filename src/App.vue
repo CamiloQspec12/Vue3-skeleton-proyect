@@ -1,12 +1,7 @@
 <template>
-  <div id="app">
-    <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/taxis">Taxis</router-link>
-      <!-- <transition name="page" mode="out-in"> -->
-        <component :is="layout" v-if="layout" />
-      <!-- </transition> -->
-  </div>
+    <transition name="page" mode="out-in">
+      <component :is="layout" v-if="layout" />
+    </transition>
 </template>
 
 <script>
