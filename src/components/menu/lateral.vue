@@ -16,7 +16,7 @@
                         <div v-show="item.cant>0" class="badge">
                             {{ item.cant }}
                         </div>
-                        <i class="f-28" :class="item.icon" />
+                        <i class="f-20" :class="item.icon" />
                         <div class="bar-route" />
                     </a>
                 </router-link>
@@ -31,7 +31,7 @@ export default {
         return {
             rutaActiva: '',
             menus: [
-                { titulo: 'Taxis', ruta: 'taxis', icon: 'icon-flag', cant: 0 },
+                { titulo: 'Taxis', ruta: 'taxis', icon: 'icon-car-front', cant: 0 },
             ]
         }
     },

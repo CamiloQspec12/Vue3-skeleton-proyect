@@ -5,20 +5,20 @@
             :key="index"
             class="item"
             effect="light"
-            :disabled="false"
-            content="Bottom Right prompts info"
+            :disabled="($route.name == item.ruta)"
+            :content="item.titulo"
             placement="bottom"
         >
             <router-link :to="{ name: `${item.ruta}`, params: item.params || {} }" class="col-auto d-middle justify-content-around position-relative pt-1">
-                <i v-if="item.icono" :class="`${item.icono}`" class="f-22" />
-                <p class="nombre-tab pb-0">{{ item.titulo }}</p>
+                <i v-if="item.icono" :class="`${item.icono}`" class="f-20" />
+                <p v-if="$route.name == item.ruta" class="nombre-tab pb-0">{{ item.titulo }}</p>
                 <div style="width:8px;" />
                 <div class="item-num br-20">
                     {{ item.num }}
                 </div>
             </router-link>
         </el-tooltip>
-        
+        <slot />
         <!-- <router-link
         v-for="(item,index) in tabs" 
         :key="index"
@@ -35,7 +35,6 @@
                 ({{ item.num }})
             </div>
         </router-link> -->
-        <!-- <slot name="btnAgregar" /> -->
     </div>
 </template>
 
@@ -66,12 +65,10 @@ export default {
 <style lang="scss" scoped>
 
 .tabs{
-    
     a{
         text-decoration: none;
         height: 40px;
-        min-width: 150px;
-        color: var(--color-gray) ;
+        color: #868686;
         font-size: 14px;
         border-bottom: 2px solid transparent !important;
         
