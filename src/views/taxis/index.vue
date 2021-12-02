@@ -1,10 +1,8 @@
 <template>
-    <section>
-        Prueba pagina de taxis
-        <hello-world msg="Welcome to Your Vue.js App" />
-        <div class="row mx-0 bg-danger">
-            {{ test }}
-            <el-input v-model="test" />
+    <section class="pt-3">
+        <tabs :tabs="rutas" class="mx-5 border-bottom" />
+        <div class="custom-scroll overflow-auto" style="height:calc(100vh - 117px)">
+            <router-view />
         </div>
     </section>
 </template>
@@ -13,7 +11,11 @@
 export default {
     data(){
         return {
-            test: ''
+            rutas: [
+                { titulo: 'Servicios', num: 30, ruta: 'taxis.servicios', icono: 'icon-map-marker-outline' },
+                { titulo: 'Inconvenientes', num: 30, ruta: 'taxis.inconvenientes', icono: 'icon-flag' },
+                { titulo: 'Soporte General', num: 30, ruta: 'taxis.soporte-general', icono: 'icon-burble-chat' }
+            ]
         }
     }
 }

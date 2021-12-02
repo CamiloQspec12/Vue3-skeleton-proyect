@@ -1,6 +1,6 @@
 <template>
-    <section class="menu-lateral scroll-none overflow-auto pt-4">
-        <!-- <div v-for="(item, idx) in menus" :key="idx" class="row mx-0 my-3 j-center">
+    <section class="menu-lateral scroll-none overflow-auto pt-2">
+        <div v-for="(item, idx) in menus" :key="idx" class="row mx-0 mt-3 mb-2 j-center">
             <el-tooltip class="item" effect="light" :content="item.titulo" placement="top-start">
                 <router-link
                 v-slot="{ navigate, isActive }"
@@ -16,11 +16,12 @@
                         <div v-show="item.cant>0" class="badge">
                             {{ item.cant }}
                         </div>
-                        <i class="f-25 text-white" :class="item.icon" />
+                        <i class="f-28" :class="item.icon" />
+                        <div class="bar-route" />
                     </a>
                 </router-link>
             </el-tooltip>
-        </div> -->
+        </div>
     </section>
 </template>
 
@@ -55,5 +56,29 @@ export default {
     left: 1px;
     height: calc(100vh - 57px);
     box-shadow: 1px 0px 2px #00000029;
+    a{
+        width:100%;
+        height:32px;
+        .bar-route{
+            position: absolute;
+            right: -12px;
+            top: 1px;
+            height: 32px;
+            width: 3px;
+            border-radius: 12px 0px 0px 12px;
+        }
+        &:hover{
+            background:#ffffff50;
+        }
+        &.router-link-exact-active.router-link-active{
+            color:var(--color-general);
+            .bar-route{
+                background-color: var(--color-general);
+            }
+        }
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
 }
 </style>
