@@ -59,6 +59,7 @@ export default {
     a{
         width:100%;
         height:32px;
+        color: #5F6D84;
         .bar-route{
             position: absolute;
             right: -12px;
@@ -68,7 +69,7 @@ export default {
             border-radius: 12px 0px 0px 12px;
         }
         &:hover{
-            background:#ffffff50;
+            color:var(--color-general);
         }
         &.router-link-exact-active.router-link-active{
             color:var(--color-general);

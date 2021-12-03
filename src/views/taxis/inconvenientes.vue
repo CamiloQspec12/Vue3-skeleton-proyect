@@ -1,6 +1,6 @@
 <template>
     <section>
-        dwadwadwa
+        Aqui va inconvenientes
     </section>
 </template>
 

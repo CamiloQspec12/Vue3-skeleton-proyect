@@ -1,6 +1,6 @@
 <template>
     <section>
-        ddawdwad
+        Soporte General
     </section>
 </template>
 

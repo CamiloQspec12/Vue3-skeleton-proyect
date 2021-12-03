@@ -1,9 +1,12 @@
-// Here go all the imports of each folder with them files 
-// Created by CQ -> Camilo Quintero
-
 // Abstracts
 @import 'abstracts/_variables';
 
 // components
 @import 'components/_buttons';
 @import 'components/_helpes';
+
+// base
+@import 'base/_typhography.scss';
+
+//theme
+@import 'theme/_theme.scss';
